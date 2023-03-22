@@ -1,0 +1,126 @@
+.about-us-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 115px;
+  align-items: center;
+  margin: auto;
+  max-width: 1400px;
+  padding-bottom: 125px;
+}
+.title {
+  background: #efdfd3;
+  padding: 15px 30px 15px 0;
+  width: 170px;
+}
+.title h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #706c64;
+  text-align: right;
+}
+.about-title-block {
+  padding: 200px 20px 0 20px;
+}
+.about-us-header {
+  padding: 30px 30px 30px 0px;
+}
+.about-img {
+  width: 100%;
+}
+.our-benefits {
+  padding-bottom: 100px;
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+.benefits {
+  width: 350px;
+  margin-left: 22px;
+}
+.benefits-items {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: end;
+}
+.benefit-item {
+  text-align: center;
+}
+.benefit-item p {
+  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #706c64;
+}
+.description {
+  max-width: 1400px;
+  margin: auto;
+}
+.description p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+.description p:last-child {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 1200px) {
+  .about-title-block {
+    padding: 50px 20px 0 20px;
+  }
+  .about-us-block {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-us-block img {
+    margin: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .benefits-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .about-img {
+    width: 100%;
+    padding: 50px;
+  }
+  .about-us-header {
+    padding: 20px;
+  }
+}
+@media (max-width: 530px) {
+  .benefits-items {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+  .title {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .title h2 {
+    text-align: center;
+  }
+  .about-img {
+    width: 100%;
+    padding: 0px;
+  }
+  .benefits {
+    width: 100%;
+    margin-left: 0;
+  }
+}

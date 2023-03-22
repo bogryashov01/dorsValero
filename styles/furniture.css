@@ -1,0 +1,61 @@
+.furniture-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1400px;
+  margin: auto;
+  padding: 125px 20px;
+  gap: 50px;
+}
+.title {
+  width: 250px;
+}
+.furniture-block-item {
+}
+.furniture-block-catalogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.furniture-catalog-item {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+}
+.furniture-catalog-item a {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  padding-top: 15px;
+  color: #706c64;
+}
+.furniture-catalog-title {
+  padding-top: 15px;
+}
+.furniture-catalog-item a:hover {
+  text-decoration: none;
+  color: #706c64;
+}
+.furniture-catalog-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+}
+.mvm-catalog {
+  background-image: url("/assets/pdf/mvm.jpg");
+}
+.twin-catalog {
+  background-image: url("/assets/pdf/twin.jpg");
+}
+
+@media (max-width: 1100px) {
+  .furniture-block {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .furniture-block-catalogs {
+    grid-template-columns: 1fr;
+  }
+}

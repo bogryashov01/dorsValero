@@ -1,0 +1,484 @@
+/* ----- Logo contacts ----- */
+
+.nav-logo {
+  height: 70px;
+  width: auto;
+  padding: 0 20px;
+}
+.nav-icon {
+  width: 25px;
+}
+/* ----- NAVBAR ----- */
+
+.jnavbar {
+  height: 90px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  max-width: 1400px;
+  margin: auto;
+  align-items: center;
+}
+
+.nav {
+  align-items: center;
+}
+
+.nav-disable {
+  display: none;
+}
+.nav-link,
+.jbtn-nav {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #706c64;
+  margin-left: 0.5rem;
+}
+
+.nav-link:hover {
+  color: #706c64;
+}
+
+#light {
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: #97baa6;
+  color: #fff;
+  opacity: 0.9;
+}
+#main {
+  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: #bc8b7c;
+  color: #fff;
+  opacity: 0.9;
+}
+#light:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #97baa6;
+  opacity: 1;
+}
+#main:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #bc8b7c;
+  opacity: 1;
+}
+
+.right-nav-parent {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.navbar-brand {
+  margin: 0;
+}
+.contact-phone-block {
+  background: #efdfd3;
+  padding: 25px 13px 16px 0px;
+  text-align: right;
+  height: 100%;
+  width: 215px;
+}
+.phone {
+  color: #7f807a;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+.phone:hover {
+  color: #7f807a;
+  text-decoration: none;
+}
+.mail {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #706c64;
+}
+.mail:hover {
+  color: #706c64;
+  text-decoration: none;
+}
+
+/* .right-nav-parent ul {
+    margin-right: 2em;
+} */
+
+.nav-link .nav-icon {
+  color: #97baa6;
+  padding-left: 0;
+  padding-right: 0;
+}
+.nav-link .nav-icon:hover {
+  color: #8d4d44;
+}
+
+.language-bar {
+  display: flex;
+  padding-left: 30px;
+}
+.mobile-language-bar {
+  display: grid;
+  max-width: 200px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+}
+.language-bar a:first-child {
+  margin-right: 20px;
+}
+.language-bar a {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+.active {
+  color: rgba(151, 186, 166, 0.9);
+}
+
+/* navbar lang dropdown */
+#dropdownLang {
+  min-width: 4.5rem;
+  width: 4.5rem;
+}
+
+/*  ----- NAVBAR TOGGLE BUTTON ----- */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button {
+  display: none;
+  position: relative;
+  top: 0;
+  /* the default value 5% */
+  right: 0;
+  /* the default value 2% */
+  height: 30px;
+  /* the default value 27px*/
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+}
+
+/* .toggle-button:hover {
+    opacity: .7;
+} */
+
+.toggle-button:hover span {
+  background: #8d4d44;
+}
+
+.toggle-button.active:hover .top {
+  background: #8d4d44;
+}
+
+.toggle-button.active:hover .middle {
+  background: #8d4d44;
+}
+
+.toggle-button.active:hover .bottom {
+  background: #8d4d44;
+}
+
+.toggle-button.active {
+  z-index: 100;
+  position: fixed;
+  top: 2rem;
+  /* right: 1rem; */
+  right: 15px;
+}
+
+.toggle-button.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #bc8b7c;
+  border-radius: 5px;
+}
+
+.toggle-button.active .middle {
+  opacity: 0;
+  background: #bc8b7c;
+  border-radius: 5px;
+}
+
+.toggle-button.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #bc8b7c;
+  border-radius: 5px;
+}
+
+.toggle-button span {
+  background: #bc8b7c;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-button span:nth-of-type(2) {
+  top: 11px;
+}
+
+.toggle-button span:nth-of-type(3) {
+  top: 22px;
+}
+
+/* ----- NAVBAR OVERLAY ----- */
+
+.overlay {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.overlay .nav-logo {
+  height: 70px;
+  margin-top: 14px;
+}
+
+.overlay .jbtn-nav {
+  font-family: 'Bebas Neue', cursive;
+  padding: 9px 19px;
+  font-size: 1.2rem;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+}
+
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.35s;
+}
+
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.45s;
+}
+
+.overlay.open li:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+
+.overlay.open li:nth-of-type(6) {
+  animation-delay: 0.55s;
+}
+
+.overlay nav {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 6);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #bc8b7c;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+  width: 100%;
+}
+
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #8d4d44;
+  transition: 0.35s;
+}
+
+.overlay-brand {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+}
+
+.overlay-bottom img {
+  width: 48px;
+  height: 48px;
+}
+
+/* The @keyframes rule specifies the animation code , more info: https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (max-device-width: 1377px) {
+  .nav-link,
+  .jbtn-nav {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 1377px) {
+  .right-nav-parent {
+    display: none;
+  }
+  .contact-phone-block {
+    display: none;
+  }
+  .contact-phone-block-burger-menu {
+    display: grid;
+    gap: 20px;
+    padding: 25px 16px;
+    background: #efdfd3;
+    text-align: center;
+    height: 100%;
+  }
+  .toggle-button {
+    display: block;
+  }
+  .navbar-brand {
+    margin-left: 0;
+  }
+  .toggle-container {
+    margin-left: auto;
+  }
+  .jnavbar {
+    margin: 15px 0;
+    padding: 0 50px;
+  }
+}
+
+@media (max-device-width: 768px) {
+  .nav-logo {
+    height: 60px;
+  }
+  .overlay nav {
+    top: 35%;
+    font-size: 25px;
+  }
+  /* .info {
+        font-size: 0.6rem;
+    } */
+}
+
+/* ----- HEIGHT QUERIES ----- */
+
+@media only screen and (max-height: 580px) {
+  .overlay nav {
+    top: 35%;
+    font-size: 25px;
+  }
+  .overlay ul li {
+    min-height: 25px;
+  }
+  .overlay .jbtn-nav {
+    padding: 7px 13px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  .overlay-bottom img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-device-width: 420px) {
+  .info {
+    font-size: 0.7rem;
+  }
+
+  .overlay nav {
+    top: 30%;
+  }
+  .overlay ul li {
+    min-height: 25px;
+  }
+  .overlay .jbtn-nav {
+    padding: 7px 13px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  .overlay-bottom img {
+    width: 43px;
+    height: 43px;
+  }
+  .nav-logo {
+    height: 50px;
+  }
+}
+
+@media only screen and (max-height: 380px) {
+  .overlay nav {
+    top: 40%;
+    font-size: 20px;
+  }
+  .overlay ul li {
+    min-height: 20px;
+  }
+}

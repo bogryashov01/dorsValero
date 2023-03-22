@@ -1,0 +1,80 @@
+.carousel-item {
+  max-height: 100vh !important;
+  position: relative;
+}
+.background-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.carousel-discount {
+  position: absolute;
+  top: 30%;
+  width: 50%;
+  background: rgba(244, 186, 35, 0.35);
+}
+.discount-block {
+  text-align: right;
+  padding: 50px 45px 50px 0;
+}
+.discount-block-title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+.discount-block-value {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 250px;
+  line-height: 220px;
+  color: #000;
+}
+.discount-block-time {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 64px;
+
+  color: #000000;
+}
+
+@media (max-width: 1100px) {
+  .carousel-item img {
+    /* height: 350px !important; */
+  }
+  .carousel-discount {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    top: initial;
+  }
+  .background-img {
+    background-position: initial;
+    height: 50vh;
+    min-height: 500px;
+  }
+  .discount-block {
+    text-align: center;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .discount-block-title {
+    font-size: 16px;
+    line-height: initial;
+  }
+  .discount-block-value {
+    font-size: 60px;
+    line-height: initial;
+  }
+  .discount-block-time {
+    font-size: 25px;
+    line-height: initial;
+  }
+}

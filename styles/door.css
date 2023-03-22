@@ -1,0 +1,85 @@
+.door-block {
+  max-width: 1250px;
+  margin: auto;
+  padding: 100px 20px;
+}
+.current-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.item-title {
+  background: #efdfd3;
+  padding: 15px 30px 15px 20px;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  justify-content: center;
+}
+.current-item-title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #706c64;
+  margin-right: 20px;
+}
+.current-item-title:last-child {
+  margin-right: 0px;
+}
+.current-item-image {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+}
+.current-item-image img {
+  max-width: 500px;
+  max-height: 600px;
+}
+.item-description {
+  padding: 30px 0px;
+}
+
+.furniture-img {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+}
+.furniture-img img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .current-item {
+    grid-template-columns: 1fr;
+  }
+  .item-title {
+    margin: auto;
+  }
+  .item-description {
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 460px) {
+  .door-block {
+    padding: 50px 20px;
+  }
+  .current-item-image img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 600px;
+  }
+  .item-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .current-item-title {
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,38 @@
+# ----------------------------------------------------------------------
+# Rewrite from HTTP to HTTPS
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+ErrorDocument 404 /pages/404.php
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Rewrite for clean URLs
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^/?$ /index.php
+RewriteRule ^about/?$ /pages/about-us.php
+RewriteRule ^catalog/?$ /pages/doors-catalog.php
+RewriteRule ^gallery/?$ /pages/doorGallery.php
+RewriteRule ^furniture/?$ /pages/furniture-catalog.php
+RewriteRule ^door/(.*)/?$ /pages/door.php?id=$1
+RewriteRule ^contacts/?$ /pages/contacts.php
+
+RewriteRule ^([^/.]+)/?$ /index.php?lang=$1
+RewriteRule ^([^/.]+)/about/?$ /pages/about-us.php?lang=$1
+RewriteRule ^([^/.]+)/catalog/?$ /pages/doors-catalog.php?lang=$1
+RewriteRule ^([^/.]+)/gallery/?$ /pages/doorGallery.php?lang=$1
+RewriteRule ^([^/.]+)/furniture/?$ /pages/furniture-catalog.php?lang=$1
+RewriteRule ^([^/.]+)/door/(.*)/?$ /pages/door.php?lang=$1&id=$2
+RewriteRule ^([^/.]+)/contacts/?$ /pages/contacts.php?lang=$1 [L] </IfModule>
